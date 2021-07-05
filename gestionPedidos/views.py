@@ -29,7 +29,7 @@ def contacto(request):
         subject = request.POST["asunto"]
         message = request.POST["mensaje"] + " " + request.POST["email"]
         email_from = settings.EMAIL_HOST_USER
-        recipient_list = ["fserrano6@hotmail.com"]
+        recipient_list = ["fransego6@gmail.com"]
         send_mail(subject, message, email_from, recipient_list)
         return render(request, "gracias.html")
     return render(request, "contacto.html")
